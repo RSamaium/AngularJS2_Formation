@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';;
 
 @Component({
   selector: 'app-home',
@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  valueFilter:string = 'all';
+
+  genres: any[] = ["fict", "anim", "sport", "dram"];
   medias: any[] = [
   {
     "albumId": 1,
@@ -55,10 +58,6 @@ export class HomeComponent {
     "url": "http://placehold.it/600/56a8c2",
     "thumbnailUrl": "http://placehold.it/150/c672a0"
   }];
-
-  constructor() {
-
-  }
 
 
 
