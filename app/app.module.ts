@@ -7,6 +7,7 @@ import { NavbarModule } from './navbar/navbar.module';
 import { MenuModule } from './menu/menu.module';
 import { HomeModule } from './home/home.module';
 
+
 @NgModule({
   declarations: [
     AppComponent

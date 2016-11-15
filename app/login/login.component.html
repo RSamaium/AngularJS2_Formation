@@ -1,0 +1,21 @@
+<div class="signin">
+	<div id="small-dialog">
+		<h3>Login</h3>
+		<div class="signup">
+      <div *ngIf="submitted">
+        <div [hidden]="!password.hasError('invalidPassword')">
+            Mot de passe invalide
+        </div>
+        <div [hidden]="!username.hasError('email')">
+            Email invalide
+        </div>
+      </div>
+			<form [formGroup]="form" (ngSubmit)="submit()" [ngClass]="{'ng-submitted': submitted}">
+				<input type="text" class="email" placeholder="Enter email / mobile" [formControl]="username">
+				<input type="password" class="password" placeholder="Password" [formControl]="password">
+				<button type="submit">Valider</button>
+			</form>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+</div>
