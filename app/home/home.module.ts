@@ -4,14 +4,14 @@ import { HomeComponent } from './home.component';
 import { CardComponent } from './card/card.component';
 import { GenrePipe, GenreFilter } from './card/genre.pipe';
 import { FormsModule } from '@angular/forms';
+import { routing } from '../app.router';
 
-import { LoginModule } from '../login/login.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    LoginModule
+    routing
   ],
   declarations: [HomeComponent, CardComponent, GenrePipe, GenreFilter],
   exports: [HomeComponent]

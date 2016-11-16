@@ -6,7 +6,7 @@ import 'rxjs/Rx';
 @Injectable()
 export class MediaService {
 
-  url: string = 'https://jsonplaceholder.typicode.com/photos';
+  url: string = 'https://jsonplaceholder.typicode.com/posts';
 
   constructor(private http:Http) {
   }
