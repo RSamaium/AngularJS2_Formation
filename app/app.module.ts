@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import {HttpModule} from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { MainComponent } from './main.component';
+import { ContentComponent } from './content/content.component';
 
 import { NavbarModule } from './navbar/navbar.module';
 import { MenuModule } from './menu/menu.module';
@@ -14,12 +14,13 @@ import { MediaModule } from './media/media.module';
 import { MediaService } from './core/medias.service';
 import { GenreService } from './core/genre.service';
 
+import {HomeRouting} from './home/home.router';
 import {routing} from './app.router';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    ContentComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +30,8 @@ import {routing} from './app.router';
     HomeModule,
     MediaModule,
     LoginModule,
-    routing
+    routing,
+    HomeRouting
   ],
   bootstrap: [AppComponent],
   providers: [MediaService, GenreService]
