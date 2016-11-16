@@ -18,7 +18,9 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.medias = this.mediaService.query();
+    this.mediaService.query().subscribe((obj:any[]) => {
+      this.medias= obj;
+    });
     this.genres = this.genreService.query();
   }
 

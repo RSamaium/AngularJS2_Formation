@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpModule} from '@angular/http';
 
 import { AppComponent } from './app.component';
 
@@ -16,6 +17,7 @@ import { GenreService } from './core/genre.service';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     NavbarModule,
     MenuModule,
     HomeModule
