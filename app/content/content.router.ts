@@ -1,7 +1,7 @@
 import {RouterModule, Routes} from '@angular/router';
 import {MediaComponent} from '../media/media.component';
-import {ContentComponent} from '../content/content.component';
-import {HomeComponent} from './home.component';
+import {ContentComponent} from './content.component';
+import {HomeComponent} from '../home/home.component';
 
 const routes:Routes = [
   {
@@ -20,4 +20,4 @@ const routes:Routes = [
   },
 ];
 
-export const HomeRouting = RouterModule.forChild(routes);
+export const ContentRouting = RouterModule.forChild(routes);

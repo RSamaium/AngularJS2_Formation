@@ -17,4 +17,10 @@ export class MediaService {
         .map((response:Response) => response.json())
   }
 
+  get(id:number) {
+    return this.http
+      .get(`${this.url}/${id}`)
+      .map((response:Response) => response.json())
+  }
+
 }

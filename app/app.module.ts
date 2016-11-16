@@ -14,7 +14,7 @@ import { MediaModule } from './media/media.module';
 import { MediaService } from './core/medias.service';
 import { GenreService } from './core/genre.service';
 
-import {HomeRouting} from './home/home.router';
+import { ContentRouting } from './content/content.router';
 import {routing} from './app.router';
 
 @NgModule({
@@ -31,7 +31,7 @@ import {routing} from './app.router';
     MediaModule,
     LoginModule,
     routing,
-    HomeRouting
+    ContentRouting
   ],
   bootstrap: [AppComponent],
   providers: [MediaService, GenreService]
