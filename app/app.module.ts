@@ -9,13 +9,11 @@ import { NavbarModule } from './navbar/navbar.module';
 import { MenuModule } from './menu/menu.module';
 import { HomeModule } from './home/home.module';
 import { LoginModule } from './login/login.module';
-import { MediaModule } from './media/media.module';
 
 import { MediaService } from './core/medias.service';
 import { GenreService } from './core/genre.service';
 
-import { ContentRouting } from './content/content.router';
-import {routing} from './app.router';
+import {AppRouter} from './app.router';
 
 @NgModule({
   declarations: [
@@ -28,10 +26,8 @@ import {routing} from './app.router';
     NavbarModule,
     MenuModule,
     HomeModule,
-    MediaModule,
     LoginModule,
-    routing,
-    ContentRouting
+    AppRouter
   ],
   bootstrap: [AppComponent],
   providers: [MediaService, GenreService]

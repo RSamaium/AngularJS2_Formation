@@ -9,10 +9,10 @@ import { Component } from '@angular/core';
     <app-menu></app-menu>
   </div>
   <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-    <router-outlet></router-outlet>
+    <app-home></app-home>
   </div>
   `
 })
 export class ContentComponent {
-  title = 'app works!';
+  
 }
