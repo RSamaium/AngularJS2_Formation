@@ -14,7 +14,7 @@
  	  </select>
 
 		<div class="clearfix"> </div>
-		<app-card *ngFor="let m of medias | genreFilter:valueFilter ; let i = index"
+		<app-card *ngFor="let m of medias | genreFilter:valueFilter | search:searchStr ; let i = index"
 							[media]="m" (onDelete)="onDeleteMedia(i)"></app-card>
 		<div class="clearfix"> </div>
 	</div>

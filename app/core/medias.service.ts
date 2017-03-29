@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Http, Response, Headers, RequestOptions} from '@angular/http';
+import { Observable } from 'rxjs';
 import 'rxjs/Rx';
 
 
@@ -12,6 +13,7 @@ export class MediaService {
     token: 'secret-token',
     'content-type': 'application/json'
   });
+  _search:Observable<string>;
 
   constructor(private http:Http) {
   }
@@ -41,6 +43,14 @@ export class MediaService {
 
   delete(id:number) {
     return this.http.delete(`${this.url}/${id}`)
+  }
+
+  get search() {
+    return this._search;
+  }
+
+  set search(observable:Observable<string>) {
+    this._search = observable;
   }
 
 }

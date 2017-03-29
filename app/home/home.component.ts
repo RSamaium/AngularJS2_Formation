@@ -9,9 +9,9 @@ import { GenreService } from '../core/genre.service';
 export class HomeComponent implements OnInit {
 
   valueFilter:string = 'all';
-
+  searchStr:string;
   genres: any[];
-  medias: any[];
+  medias: any[] = [];
 
   constructor(private mediaService:MediaService, private genreService:GenreService) {
 
@@ -22,6 +22,10 @@ export class HomeComponent implements OnInit {
       this.medias= obj;
     });
     this.genres = this.genreService.query();
+    this.mediaService.search.subscribe((str:string) => {
+      console.log(str);
+      this.searchStr = str;
+    });
   }
 
   createMedia() {
