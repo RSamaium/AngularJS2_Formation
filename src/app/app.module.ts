@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core'
 
 import { AppComponent } from './app.component'
 
-import { NavbarModule } from './navbar/navbar.module'
-import { MenuModule } from './menu/menu.module'
-import { HomeModule } from './home/home.module'
+import { LayoutModule } from './layout/layout.module'
+import { LoginModule } from './login/login.module'
+
+import { AppRouter } from './app.router'
 
 @NgModule({
   declarations: [
@@ -13,9 +14,9 @@ import { HomeModule } from './home/home.module'
   ],
   imports: [
     BrowserModule,
-    NavbarModule,
-    MenuModule,
-    HomeModule
+    LayoutModule,
+    LoginModule,
+    AppRouter
   ],
   bootstrap: [ AppComponent ]
 })
