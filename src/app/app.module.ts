@@ -1,9 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { BrowserModule } from '@angular/platform-browser'
+import { NgModule } from '@angular/core'
 
-import { AppComponent } from './app.component';
+import { AppComponent } from './app.component'
+
+import { NavbarModule } from './navbar/navbar.module'
+import { MenuModule } from './menu/menu.module'
+import { HomeModule } from './home/home.module'
 
 @NgModule({
   declarations: [
@@ -11,10 +13,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule
+    NavbarModule,
+    MenuModule,
+    HomeModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
