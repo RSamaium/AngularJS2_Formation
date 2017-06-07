@@ -4,7 +4,7 @@
 			<h3>Recent Videos</h3>
 		</div>
 
-		 <select class="form-control" [(ngModel)]="valueFilter">
+		<select class="form-control" [(ngModel)]="valueFilter">
 			 <option value="all">Tous</option>
 	 		 <option *ngFor="let g of genres" [value]="g">{{g | genre}}</option>
  	  </select>
