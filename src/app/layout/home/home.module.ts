@@ -6,12 +6,14 @@ import { HomeComponent } from './home.component'
 import { CardComponent } from './card/card.component'
 
 import { GenrePipe, GenreFilter } from './card/genre.pipe'
+import { LayoutRouter } from '../layout.router'
 
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    LayoutRouter
   ],
   declarations: [ 
     HomeComponent, 

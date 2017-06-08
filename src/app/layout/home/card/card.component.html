@@ -3,7 +3,7 @@
     <a href="single.html"><img [src]="media.thumbnailUrl" alt="" /></a>
   </div>
   <div class="resent-grid-info recommended-grid-info">
-    <h3><a href="single.html" class="title title-info">{{media.title}}</a></h3>
+    <h3><a [routerLink]="['media', media.id]" class="title title-info">{{media.title}}</a></h3>
     {{media.genre | genre}}
     <button (click)="deleteMedia()">Supprimer</button>
   </div>

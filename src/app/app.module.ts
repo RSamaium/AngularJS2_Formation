@@ -10,6 +10,7 @@ import { LoginModule } from './login/login.module'
 import { MediaService } from './core/media.service'
 
 import { AppRouter } from './app.router'
+import { LayoutRouter } from './layout/layout.router'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AppRouter } from './app.router'
     HttpModule,
     LayoutModule,
     LoginModule,
-    AppRouter
+    AppRouter,
+    LayoutRouter
   ],
   bootstrap: [AppComponent],
   providers: [MediaService]
