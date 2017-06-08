@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { MediaService } from '../../../core/media.service';
 
 @Component({
   selector: 'app-card',
@@ -7,11 +7,18 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  @Input() media:any;
+  @Input() media: any
+  @Output() onDelete: EventEmitter<any> = new EventEmitter()
 
-  constructor() { }
+  constructor(private mediaService: MediaService) { }
 
   ngOnInit() {
+  }
+
+  deleteMedia() {
+    this.mediaService.delete(this.media.id).subscribe(() => {
+      this.onDelete.emit()
+    })
   }
 
 }

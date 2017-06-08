@@ -14,9 +14,21 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.mediaService.query().subscribe((medias: any[]) => {
+    this.mediaService.query().then((medias: any[]) => {
       this.medias = medias
     })
+  }
+
+  createMedia() {
+    this.mediaService.create({
+      title: 'hello'
+    }).subscribe((media: any) => {
+      this.medias.push(media)
+    })
+  }
+
+  onDeleteMedia(index: number) {
+    this.medias.splice(index, 1);
   }
 
 }
