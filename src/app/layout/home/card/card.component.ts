@@ -15,7 +15,8 @@ export class CardComponent implements OnInit {
   ngOnInit() {
   }
 
-  deleteMedia() {
+  deleteMedia(bool:boolean) {
+    if (!bool) return
     this.mediaService.delete(this.media.id).subscribe(() => {
       this.onDelete.emit()
     })
