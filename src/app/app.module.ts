@@ -6,6 +6,8 @@ import { AppComponent } from './app.component'
 import { LayoutModule } from './layout/layout.module'
 import { LoginModule } from './login/login.module'
 
+import { MediaService } from './core/media.service'
+
 import { AppRouter } from './app.router'
 
 @NgModule({
@@ -18,6 +20,7 @@ import { AppRouter } from './app.router'
     LoginModule,
     AppRouter
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ AppComponent ],
+  providers: [ MediaService ]
 })
 export class AppModule { }
