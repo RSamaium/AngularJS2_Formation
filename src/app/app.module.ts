@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
+import { HttpModule } from '@angular/http'
 
 import { AppComponent } from './app.component'
 
@@ -16,11 +17,12 @@ import { AppRouter } from './app.router'
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     LayoutModule,
     LoginModule,
     AppRouter
   ],
-  bootstrap: [ AppComponent ],
-  providers: [ MediaService ]
+  bootstrap: [AppComponent],
+  providers: [MediaService]
 })
 export class AppModule { }

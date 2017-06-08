@@ -1,5 +1,5 @@
-import { Component, OnInit} from '@angular/core';
-import { MediaService } from '../../core/media.service'
+import { Component, OnInit } from '@angular/core';
+import { MediaService } from '../../core/media.service';
 
 @Component({
   selector: 'app-home',
@@ -7,16 +7,16 @@ import { MediaService } from '../../core/media.service'
 })
 export class HomeComponent implements OnInit {
 
-  valueFilter:string = 'all'
-  genres: any[]
-  medias: any[] = []
+  valueFilter: string = 'all'
+  medias: any[]
 
-  constructor(private mediaService:MediaService) {
-
+  constructor(private mediaService: MediaService) {
   }
 
   ngOnInit() {
-    this.medias = this.mediaService.query();
+    this.mediaService.query().subscribe((medias: any[]) => {
+      this.medias = medias
+    })
   }
 
 }
