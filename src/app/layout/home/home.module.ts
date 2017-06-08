@@ -8,6 +8,7 @@ import { CardComponent } from './card/card.component'
 import { GenrePipe, GenreFilter } from './card/genre.pipe'
 import { LayoutRouter } from '../layout.router'
 
+import { ConfirmDirective } from 'app/shared/directives/confirm.directive'
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { LayoutRouter } from '../layout.router'
     HomeComponent, 
     CardComponent,
     GenrePipe, 
-    GenreFilter 
+    GenreFilter,
+    ConfirmDirective
   ],
   exports: [ HomeComponent ]
 })

@@ -5,6 +5,8 @@
   <div class="resent-grid-info recommended-grid-info">
     <h3><a [routerLink]="['media', media.id]" class="title title-info">{{media.title}}</a></h3>
     {{media.genre | genre}}
-    <button (click)="deleteMedia()">Supprimer</button>
+    <button (click)="deleteMedia()" 
+    prompt="Voulez-vous supprimer le média ?"
+    [mediaId]="media.id">Supprimer</button>
   </div>
 </div>
