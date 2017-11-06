@@ -1,9 +1,12 @@
 <div class="col-md-4 resent-grid recommended-grid slider-top-grids">
   <div class="resent-grid-img recommended-grid-img">
-    <a href="single.html"><img [src]="media.thumbnailUrl" alt="" /></a>
+    <a href="single.html">
+      <img src="https://image.tmdb.org/t/p/w500/{{media.backdrop_path}}" alt="" />
+    <!--<img [src]="'https://image.tmdb.org/t/p/w500/' + media.backdrop_path" alt="" />-->
+    </a>
   </div>
   <div class="resent-grid-info recommended-grid-info">
     <h3><a href="single.html" class="title title-info">{{media.title}}</a></h3>
-    {{media.genre}}
+    {{media.vote_average}} / 10
   </div>
 </div>
